@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional || Music Player</title>
+    <link rel="shortcut icon" href="music-logo.png" type="image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <h2 id="trackTitle">Choose Your Files</h2>
+        <input type="File" id="fileInput" accept="video/*, audio/*">
+
+        <div class="equalizer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <video id="videoPlayer" class="media" hidden controls>
+            Your browser does not support video tag
+        </video>
+
+        <audio id="audioPlayer" class="media" hidden controls>Your browser does not support audio tag</audio>
+
+
+
+        <div class="controls" hidden id="customControls">
+            <button id="playPauseBtn" class="control-btn">Play</button>
+
+            <div class="progress-container">
+                <span id="currentTime">0:00</span>
+                <input id="seekBar" type="range" min="0" max="100" value="0">
+                <span id="duration"></span>
+            </div>
+            <button id="muteBtn" class="control-btn">Mute</button>
+            <input type="range" id="volumeBar" class="volume-slider" min="0" max="100" value="100">
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
